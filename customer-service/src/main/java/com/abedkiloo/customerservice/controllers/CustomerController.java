@@ -1,6 +1,6 @@
-package controllers;
+package com.abedkiloo.customerservice.controllers;
 
-import com.abedkiloo.customerservice.Customer;
+import com.abedkiloo.customerservice.models.Customer;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RestController;
@@ -20,7 +20,7 @@ public class CustomerController {
         return customers;
     }
 
-    @GetMapping
+    @GetMapping("/{id}")
     public Customer getCustomerById(@PathVariable int id) {
         return customers.stream().
                 filter(customer -> customer.getId() == id).

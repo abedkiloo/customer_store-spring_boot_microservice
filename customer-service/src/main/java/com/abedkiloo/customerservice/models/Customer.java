@@ -1,4 +1,4 @@
-package com.abedkiloo.customerservice;
+package com.abedkiloo.customerservice.models;
 
 public class Customer {
     private final int id;
